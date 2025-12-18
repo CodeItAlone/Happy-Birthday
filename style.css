@@ -1,0 +1,152 @@
+:root {
+  --primary: #ff6b6b;
+  --secondary: #feca57;
+  --bg: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  color: white;
+  min-height: 100vh;
+}
+
+#wrapper {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---------------- GIFT ---------------- */
+
+.gift-box {
+  width: 140px;
+  height: 140px;
+  margin: 80px auto 20px;
+  position: relative;
+  cursor: pointer;
+  animation: pulse 1.8s infinite;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 14px;
+}
+
+.lid {
+  position: absolute;
+  top: -22px;
+  left: -6%;
+  width: 112%;
+  height: 32px;
+  background: var(--secondary);
+  border-radius: 10px;
+}
+
+.hint-text {
+  opacity: 0.85;
+}
+
+/* ---------------- TEXT ---------------- */
+
+.glow-text {
+  font-size: 2.1rem;
+  margin-top: 40px;
+  margin-bottom: 60px; /* FIX: space for candle */
+  text-shadow: 0 0 10px var(--primary);
+}
+
+.soft-text {
+  opacity: 0.85;
+  margin-top: 10px;
+}
+
+/* ---------------- CAKE ---------------- */
+
+.cake-container {
+  margin-top: 20px;
+  padding-top: 40px; /* FIX: reserves space above cake */
+}
+
+.cake {
+  width: 180px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 60px; /* FIX: candle space */
+}
+
+.layer {
+  height: 38px;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+.layer-bottom { background: #6d4c41; }
+.layer-middle { background: #f06292; }
+.layer-top { background: #f8bbd0; }
+
+.candle {
+  width: 14px;
+  height: 50px;
+  background: white;
+  position: absolute;
+  top: 0; /* FIX: no negative positioning */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.flame {
+  width: 18px;
+  height: 24px;
+  background: orange;
+  border-radius: 50%;
+  position: absolute;
+  top: -22px;
+  left: -2px;
+  box-shadow: 0 0 12px orange;
+  animation: flicker 0.6s infinite alternate;
+}
+
+/* ---------------- CARD ---------------- */
+
+.card {
+  margin-top: 50px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.3);
+  transition: all 1s ease;
+}
+
+@keyframes flicker {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}

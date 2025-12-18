@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday 🎂</title>
+
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="wrapper">
+
+  <!-- STEP 1: GIFT -->
+  <section id="surprise-container">
+    <div class="gift-box" onclick="revealBirthday()">
+      <div class="lid"></div>
+      <div class="box"></div>
+    </div>
+    <p class="hint-text">Tap to open your surprise 🎁</p>
+  </section>
+
+  <!-- STEP 2: INTRO -->
+  <section id="intro-message" class="hidden">
+    <h1 class="glow-text">Today is about YOU ✨</h1>
+    <p class="soft-text">Slow down… something special is coming.</p>
+  </section>
+
+  <!-- STEP 3: CAKE -->
+  <section id="cake-section" class="hidden">
+    <h1 class="glow-text">Happy Birthday 💖</h1>
+
+    <div class="cake-container">
+      <div class="cake">
+        <div class="layer layer-bottom"></div>
+        <div class="layer layer-middle"></div>
+        <div class="layer layer-top"></div>
+
+        <div class="candle">
+          <div class="flame"></div>
+        </div>
+      </div>
+
+      <p class="instruction">Blow into your mic to make a wish 🎤🕯</p>
+      <p class="soft-text">(Microphone access required)</p>
+    </div>
+  </section>
+
+  <!-- STEP 4: MESSAGE -->
+  <section id="message-section" class="hidden card">
+    <p>
+      You bring peace, laughter, and warmth just by being yourself.
+      That’s rare — and special.
+    </p>
+    <p>
+      I’m really grateful that life gave me <strong>you</strong>.
+    </p>
+  </section>
+
+  <!-- STEP 5: FINAL -->
+  <section id="final-message" class="hidden">
+    <h2>Whatever this year brings…</h2>
+    <p>I’ll always be cheering for you. 💫</p>
+  </section>
+
+</div>
+
+<audio id="bg-music" src="music.mp3" preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
